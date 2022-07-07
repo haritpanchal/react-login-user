@@ -48,11 +48,9 @@ const Login = (props) => {
 
   useEffect(() => {
     const identifier = setTimeout(() => {
-      console.log("checking");
       setFormIsValid(emailIsValid && passwordIsValid);
     }, 500);
     return () => {
-      console.log("Cleanup Call");
       clearTimeout(identifier);
     };
   }, [emailIsValid, passwordIsValid]);
